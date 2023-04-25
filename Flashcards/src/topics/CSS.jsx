@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import"./topics.css" 
 export default function CSS() {
 	const [flippedCards, setFlippedCards] = useState([]);
 
