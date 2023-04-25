@@ -37,10 +37,10 @@ export default function CSS() {
 					Which property is used to set the background color of an element in
 					CSS?
 				</h3>
-				<p id='q2a'>a) background-color</p>
-				<p id='q2b'>
-					<b>b) color-background</b>
+				<p id='q2a'>
+					<b>a) background-color</b>
 				</p>
+				<p id='q2b'>b) color-background</p>
 				<p id='q2c'>c) element-color</p>
 				<p id='q2d'>d) background-element</p>
 				{flippedCards[1] && (
@@ -60,10 +60,10 @@ export default function CSS() {
 				</h3>
 				<p id='q3a'>a) block</p>
 				<p id='q3b'>b) inline</p>
-				<p id='q3c'>
-					<b>c) none</b>
+				<p id='q3c'>c) none</p>
+				<p id='q3d'>
+					<b>d) underline</b>
 				</p>
-				<p id='q3d'>d) underline</p>
 				{flippedCards[2] && (
 					<div>
 						<p>Answer: d) underline</p>
