@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './topics.css';
+import song from '../topics/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
 
 export default function ReactQuestions() {
 	const [flippedCards, setFlippedCards] = useState([]);
@@ -11,6 +12,8 @@ export default function ReactQuestions() {
 	};
 	return (
 		<>
+		<h3>Study Music</h3>
+		<div><audio src={song} autoPlay loop controls /></div>
 			<h1>React Quiz</h1>
 			{/* Question 1 */}
 			<div
