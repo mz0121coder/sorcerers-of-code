@@ -1,3 +1,4 @@
+
 audio {
         width: 210px;
         height: 100px;
@@ -8,10 +9,22 @@ audio {
 
       }
 
-      
-
 .card{border-radius: 10px; 
         padding: 5px;
         margin: 15px;
         background-color: lightgray;
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  background-color: lightgray;
+  min-width: 400px;
+  height: auto;
+  min-height: 250px;
+
 }

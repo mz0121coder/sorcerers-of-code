@@ -1,10 +1,15 @@
-import { useState } from 'react';
 import './topics.css';
+
 import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
 import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
 import song3 from '../topics/music/MusicianStringTrio.mp3';
 
+import { useState } from 'react';
+import ReactCardFlip from 'react-card-flip';
+
+
 export default function CSS() {
+	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
 
 	const handleCardClick = index => {
@@ -12,6 +17,7 @@ export default function CSS() {
 		newFlippedCards[index] = !newFlippedCards[index];
 		setFlippedCards(newFlippedCards);
 	};
+
 	return (
 		<>
 		<h3>Study Music</h3>
@@ -123,149 +129,228 @@ export default function CSS() {
 				onClick={() => handleCardClick(4)}>
 				<h3>Which CSS property is used to change the font of an element?</h3>
 
-				{!flippedCards[4] && (
-					<>
-						{' '}
-						<p id='q5a'>a) font-family</p>
-						<p id='q5b'>
-							<b>b) font-style</b>
-						</p>
-						<p id='q5c'>c) font-color</p>
-						<p id='q5d'>d) font-size</p>
-					</>
-				)}
-				{flippedCards[4] && (
-					<div>
-						<p>Answer: b) font-style</p>
+
+	const handleNextCard = () => {
+		if (currentCardIndex < cards.length) {
+			setCurrentCardIndex(currentCardIndex + 1);
+		}
+	};
+
+	const handlePrevCard = () => {
+		if (currentCardIndex > 0) {
+			setCurrentCardIndex(currentCardIndex - 1);
+		}
+	};
+
+	return (
+		<>
+			<header>
+				<button>Go back to homepage</button>
+			</header>
+			<h1>CSS Flashcards</h1>
+
+			<div className='card-container'>
+				<ReactCardFlip
+					isFlipped={flippedCards[currentCardIndex]}
+					flipDirection='horizontal'>
+					<div
+						className='card front'
+						style={{ backgroundColor: 'lightgrey' }}
+						onClick={() => handleCardClick(currentCardIndex)}>
+						<h3>{cards[currentCardIndex].question}</h3>
+						{cards[currentCardIndex].options.map((option, index) => (
+							<p key={index}>{option}</p>
+						))}
 					</div>
-				)}
+					<div
+						className='card back'
+						style={{ backgroundColor: 'lightgrey' }}
+						onClick={() => handleCardClick(currentCardIndex)}>
+						<p>Answer: {cards[currentCardIndex].answer}</p>
+					</div>
+				</ReactCardFlip>
 			</div>
-			{/* // Question 6 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(5)}>
-				<h3>What is the default value of the position property in CSS?</h3>
 
-				{!flippedCards[5] && (
-					<>
-						{' '}
-						<p id='q6a'>a) static</p>
-						<p id='q6b'>b) absolute</p>
-						<p id='q6c'>
-							<b>c) relative</b>
-						</p>
-						<p id='q6d'>d) fixed</p>
-					</>
-				)}
-				{flippedCards[5] && (
-					<div>
-						<p>Answer: c) relative</p>
-					</div>
-				)}
-			</div>
-			{/* // Question 7 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(6)}>
-				<h3>
-					What is the CSS property used to control the spacing between elements?
-				</h3>
-
-				{!flippedCards[6] && (
-					<>
-						{' '}
-						<p id='q7a'>a) margin</p>
-						<p id='q7b'>b) padding</p>
-						<p id='q7c'>
-							<b>c) both margin and padding</b>
-						</p>
-						<p id='q7d'>d) spacing</p>
-					</>
-				)}
-				{flippedCards[6] && (
-					<div>
-						<p>Answer: c) both margin and padding</p>
-					</div>
-				)}
-			</div>
-			{/* // Question 8 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(7)}>
-				<h3>Which CSS property is used to make text bold?</h3>
-
-				{!flippedCards[7] && (
-					<>
-						{' '}
-						<p id='q8a'>a) font-style</p>
-						<p id='q8b'>
-							<b>b) font-weight</b>
-						</p>
-						<p id='q8c'>c) text-style</p>
-						<p id='q8d'>d) text-weight</p>
-					</>
-				)}
-				{flippedCards[7] && (
-					<div>
-						<p>Answer: b) font-weight</p>
-					</div>
-				)}
-			</div>
-			{/* // Question 9 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(8)}>
-				<h3>
-					What is the CSS property used to add background color to an element?
-				</h3>
-
-				{!flippedCards[8] && (
-					<>
-						{' '}
-						<p id='q9a'>a) text-color</p>
-						<p id='q9b'>b) background-color</p>
-						<p id='q9c'>c) color-background</p>
-						<p id='q9d'>
-							<b>d) background</b>
-						</p>
-					</>
-				)}
-				{flippedCards[8] && (
-					<div>
-						<p>Answer: d) background</p>
-					</div>
-				)}
-			</div>
-			{/* // Question 10 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(9)}>
-				<h3>Which CSS property is used to set the height of an element?</h3>
-
-				{!flippedCards[9] && (
-					<>
-						{' '}
-						<p id='q10a'>a) width</p>
-						<p id='q10b'>b) size</p>
-						<p id='q10c'>
-							<b>c) height</b>
-						</p>
-						<p id='q10d'>d) length</p>
-					</>
-				)}
-
-				{flippedCards[9] && (
-					<div>
-						<p>Answer: c) height</p>
-					</div>
+			<div className='button-container'>
+				{currentCardIndex > 0 && <button onClick={handlePrevCard}>Prev</button>}
+				{currentCardIndex < cards.length - 2 && (
+					<button onClick={handleNextCard}>Next</button>
 				)}
 			</div>
 		</>
 	);
+
 	
 }
+
+}
+
+const cards = [
+	{
+		question: 'What is the box model in CSS?',
+		options: [
+			'a) A model used for creating 3D boxes with CSS',
+			'b) A model used to calculate the size and position of elements in CSS',
+			'c) A model used to create rounded corners on elements in CSS',
+			'd) A model used to create shadows and gradients on elements in CSS',
+		],
+		answer:
+			'b) A model used to calculate the size and position of elements in CSS',
+	},
+	{
+		question:
+			'What is the difference between inline and inline-block display in CSS?',
+		options: [
+			'a) There is no difference between inline and inline-block display in CSS',
+			'b) Inline elements are displayed on a single line, while inline-block elements can have multiple lines and block-level properties',
+			'c) Inline elements are displayed as block-level elements, while inline-block elements are displayed as inline elements',
+			'd) Inline elements are not affected by the box model, while inline-block elements are affected by the box model',
+		],
+		answer:
+			'b) Inline elements are displayed on a single line, while inline-block elements can have multiple lines and block-level properties',
+	},
+	{
+		question:
+			'What is the difference between position: relative and position: absolute in CSS?',
+		options: [
+			'a) There is no difference between position: relative and position: absolute in CSS',
+			"b) Relative positioning is relative to the element's normal position, while absolute positioning is relative to the nearest positioned ancestor element",
+			"c) Relative positioning is relative to the viewport, while absolute positioning is relative to the element's containing block",
+			'd) Relative positioning is only used for flexbox layouts, while absolute positioning is used for all other layouts',
+		],
+		answer:
+			"b) Relative positioning is relative to the element's normal position, while absolute positioning is relative to the nearest positioned ancestor element",
+	},
+	{
+		question: 'What is the difference between padding and margin in CSS?',
+		options: [
+			'a) There is no difference between padding and margin in CSS',
+			"b) Padding is the space between an element's content and its border, while margin is the space between an element's border and the adjacent elements",
+			'c) Padding is used to create space within an element, while margin is used to create space between elements',
+			'd) Padding is used to create space between elements, while margin is used to create space within an element',
+		],
+		answer:
+			"b) Padding is the space between an element's content and its border, while margin is the space between an element's border and the adjacent elements",
+	},
+	{
+		question: 'What is the CSS property used to create a floating element?',
+		options: ['a) float', 'b) clear', 'c) position', 'd) display'],
+		answer: 'a) float',
+	},
+	{
+		question: 'What is the CSS specificity and how is it calculated?',
+		options: [
+			'a) A measure of how important a selector is',
+			'b) A value between 0 and 1 that determines the opacity of an element',
+			'c) A measure of how complex a selector is',
+			'd) A value that determines the size of an element',
+		],
+		answer: 'a) A measure of how important a selector is',
+	},
+	{
+		question: 'What are CSS variables and how do you declare them?',
+		options: [
+			'a) Variables that store values used in CSS stylesheets',
+			'b) Variables that store values used in JavaScript functions',
+			'c) Variables that store values used in HTML templates',
+			'd) Variables that store values used in database queries',
+		],
+		answer: 'a) Variables that store values used in CSS stylesheets',
+	},
+	{
+		question: 'What is the CSS property used to create animations?',
+		options: ['a) animation', 'b) transition', 'c) transform', 'd) keyframes'],
+		answer: 'a) animation',
+	},
+	{
+		question: 'What is the CSS property used to create a gradient background?',
+		options: [
+			'a) background-color',
+			'b) background-image',
+			'c) background-repeat',
+			'd) background-gradient',
+		],
+		answer: 'b) background-image',
+	},
+	{
+		question: 'What is the CSS property used to create columns in a layout?',
+		options: [
+			'a) column-count',
+			'b) column-gap',
+			'c) column-width',
+			'd) column-span',
+		],
+		answer: 'a) column-count',
+	},
+	{
+		question: 'What is the CSS property used to create a sticky element?',
+		options: ['a) position', 'b) top', 'c) sticky', 'd) overflow'],
+		answer: 'c) sticky',
+	},
+	{
+		question:
+			'What is the difference between the :before and :after pseudo-elements in CSS?',
+		options: [
+			'a) There is no difference between the :before and :after pseudo-elements in CSS',
+			'b) :before is used to insert content before the selected element, while :after is used to insert content after the selected element',
+			'c) :before is used for elements that come before other elements, while :after is used for elements that come after other elements',
+			'd) :before is used to create elements that are positioned before the selected element, while :after is used to create elements that are positioned after the selected element',
+		],
+		answer:
+			'b) :before is used to insert content before the selected element, while :after is used to insert content after the selected element',
+	},
+	{
+		question:
+			'What is the difference between the visibility and display properties in CSS?',
+		options: [
+			'a) There is no difference between the visibility and display properties in CSS',
+			'b) visibility is used to show or hide an element, while display is used to define how an element is displayed',
+			'c) display is used to show or hide an element, while visibility is used to define how an element is displayed',
+			'd) visibility is used to define how an element is displayed, while display is used to show or hide an element',
+		],
+		answer:
+			'b) visibility is used to show or hide an element, while display is used to define how an element is displayed',
+	},
+	{
+		question: 'What is the CSS property used to create a responsive design?',
+		options: ['a) media queries', 'b) flexbox', 'c) grid', 'd) position'],
+		answer: 'a) media queries',
+	},
+	{
+		question: 'What is the CSS property used to add a shadow to an element?',
+		options: [
+			'a) box-shadow',
+			'b) text-shadow',
+			'c) shadow',
+			'd) element-shadow',
+		],
+		answer: 'a) box-shadow',
+	},
+	{
+		question:
+			'What is the difference between the :nth-child() and :nth-of-type() selectors in CSS?',
+		options: [
+			'a) There is no difference between the :nth-child() and :nth-of-type() selectors in CSS',
+			'b) :nth-child() selects all children that match the given pattern, while :nth-of-type() selects only the children that match the given pattern and type',
+			'c) :nth-child() selects only the children that match the given pattern and type, while :nth-of-type() selects all children that match the given pattern',
+			'd) :nth-child() is used to select child elements, while :nth-of-type() is used to select the type of an element',
+		],
+		answer:
+			'b) :nth-child() selects all children that match the given pattern, while :nth-of-type() selects only the children that match the given pattern and type',
+	},
+	{
+		question: 'What is the CSS property used to create a transition?',
+		options: ['a) transition', 'b) animation', 'c) transform', 'd) keyframes'],
+		answer: 'a) transition',
+	},
+	{
+		question: 'What is the CSS property used to align text within an element?',
+		options: [
+			'a) text-align',
+			'b) vertical-align',
+			'c) align-items',
+			'd) justify-content',
+		],
+		answer: 'a) text-align',
+	},
+];
