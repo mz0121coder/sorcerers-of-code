@@ -1,5 +1,12 @@
-.card{border-radius: 10px; 
-        padding: 5px;
-        margin: 15px;
-        background-color: lightgray;
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  background-color: lightgray;
+  width: auto;
+  height: 300px;
 }
