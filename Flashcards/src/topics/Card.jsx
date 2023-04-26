@@ -16,8 +16,8 @@ export default function Card({card}) {
             <div className="back">{card.correctAnswer}</div> */}
         {flip? <div className="front">{card.question}  
                 <div className="card-answers">
-                    {card.answers.map((answer => {
-                        return <p>{answer}</p>
+                    {card.answers.map((answer,index) => {
+                        return <p key ={index} >{answer}</p>
                     }))}
                 </div>
             </div> : <div className="back">{card.correctAnswer}</div>}
