@@ -1,17 +1,26 @@
-
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react"
+import React, { useState } from 'react';
 import './topics.css';
-import AudioPlayer from "./AudioPlayer";
+import AudioPlayer from './AudioPlayer';
 // import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
 // import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
 // import song3 from '../topics/music/MusicianStringTrio.mp3';
 
-
-import './topics.css';
-import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
+// const [isPlaying, setIsPlaying] = useState(true);
+
+// 	const handleCheckboxClick = () => {
+//     setIsPlaying(!isPlaying);
+
+// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
+
+// 	if (!isPlaying) {
+//       audioplay.play();
+//     } else {
+//       audioplay.pause();
+//     }
+// }
 export default function JS() {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
@@ -21,81 +30,6 @@ export default function JS() {
 		newFlippedCards[index] = !newFlippedCards[index];
 		setFlippedCards(newFlippedCards);
 	};
-
-	
-// const [isPlaying, setIsPlaying] = useState(true);
-
-// 	const handleCheckboxClick = () => {
-//     setIsPlaying(!isPlaying);
-
-// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
-    
-// 	if (!isPlaying) {
-//       audioplay.play();
-//     } else {
-//       audioplay.pause();
-//     }
-// }
-	return (
-		<>
-		<h3>Study Music</h3> <AudioPlayer/>
-		
-		{/* <div><audio src={song} loop controls />
-		<audio src={song2}  loop controls />
-		<audio src={song3} loop controls/></div> */}
-		{/* <div>
-		<label>
-        <input type="checkbox" onClick={handleCheckboxClick} />
-        Play Audio
-      </label></div> */}
-			<h1>JavaScript</h1>
-			{/* Question 1 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(0)}>
-				<h3>What does the keyword this refer to in JavaScript?</h3>
-				{!flippedCards[0] && (
-					<>
-						<p id='q1a'>a) The global object</p>
-						<p id='q1b'>
-							<b>b) The object that called the function</b>
-						</p>
-						<p id='q1c'>c) The function itself</p>
-						<p id='q1d'>d) The object where the function is defined</p>
-					</>
-				)}
-				{flippedCards[0] && (
-					<div>
-						<p>Answer: b) The object that called the function</p>
-					</div>
-				)}
-			</div>
-			{/* Question 2 */}
-			<div
-				className='card'
-				style={{ backgroundColor: 'lightgrey' }}
-				onClick={() => handleCardClick(1)}>
-				<h3>
-					What is the output of the following code: console.log(typeof [])?
-				</h3>
-				{!flippedCards[1] && (
-					<>
-						<p id='q2a'>a) Array</p>
-						<p id='q2b'>
-							<b>b) Object</b>
-						</p>
-						<p id='q2c'>c) ArrayObject</p>
-						<p id='q2d'>d) undefined</p>
-					</>
-				)}
-				{flippedCards[1] && (
-					<div>
-						<p>Answer: b) Object</p>
-					</div>
-				)}
-			</div>
-
 
 	const handleNextCard = () => {
 		if (currentCardIndex < cards.length) {
@@ -111,6 +45,7 @@ export default function JS() {
 
 	return (
 		<>
+			<AudioPlayer />
 			<header>
 				<button>Go back to homepage</button>
 			</header>

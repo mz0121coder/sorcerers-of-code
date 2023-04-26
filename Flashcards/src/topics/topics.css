@@ -1,18 +1,19 @@
-
 audio {
-        width: 210px;
-        height: 100px;
-        border-radius: 15%;
-        background-color: #d98713;       
-        margin: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 210px;
+  height: 100px;
+  border-radius: 15%;
+  background-color: #d98713;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-      }
+}
 
-.card{border-radius: 10px; 
-        padding: 5px;
-        margin: 15px;
-        background-color: lightgray;
+.card {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 15px;
+  background-color: lightgray;
+}
 
 .card {
   display: flex;
