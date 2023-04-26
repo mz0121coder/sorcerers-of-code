@@ -81,9 +81,7 @@ export default function CSS() {
 					{!flippedCards[4] && (
 						<>
 							<p id='q5a'>a) font-family</p>
-							<p id='q5b'>
-								<b>b) font-style</b>
-							</p>
+							<p id='q5b'>b) font-style</p>
 							<p id='q5c'>c) font-color</p>
 							<p id='q5d'>d) font-size</p>
 						</>
@@ -100,9 +98,7 @@ export default function CSS() {
 					<h3>What is the default value of the position property in CSS?</h3>
 					<p>a) static</p>
 					<p>b) absolute</p>
-					<p>
-						<b>c) relative</b>
-					</p>
+					<p>c) relative</p>
 					<p>d) fixed</p>
 				</div>
 				<div className='card back' onClick={() => handleCardClick(5)}>
@@ -130,9 +126,7 @@ export default function CSS() {
 				<div className='card front' onClick={() => handleCardClick(7)}>
 					<h3>Which CSS property is used to make text bold?</h3>
 					<p>a) font-style</p>
-					<p>
-						<b>b) font-weight</b>
-					</p>
+					<p>b) font-weight</p>
 					<p>c) text-style</p>
 					<p>d) text-weight</p>
 				</div>
@@ -161,9 +155,7 @@ export default function CSS() {
 					<h3>Which CSS property is used to set the height of an element?</h3>
 					<p>a) width</p>
 					<p>b) size</p>
-					<p>
-						<b>c) height</b>
-					</p>
+					<p>c) height</p>
 					<p>d) length</p>
 				</div>
 				<div className='card back' onClick={() => handleCardClick(9)}>

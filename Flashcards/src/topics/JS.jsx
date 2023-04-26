@@ -20,9 +20,7 @@ export default function JS() {
 					onClick={() => handleCardClick(0)}>
 					<h3>What does the keyword this refer to in JavaScript?</h3>
 					<p>a) The global object</p>
-					<p>
-						<b>b) The object that called the function</b>
-					</p>
+					<p>b) The object that called the function</p>
 					<p>c) The function itself</p>
 					<p>d) The object where the function is defined</p>
 				</div>
@@ -44,9 +42,7 @@ export default function JS() {
 					</h3>
 					<>
 						<p id='q2a'>a) Array</p>
-						<p id='q2b'>
-							<b>b) Object</b>
-						</p>
+						<p id='q2b'>b) Object</p>
 						<p id='q2c'>c) ArrayObject</p>
 						<p id='q2d'>d) undefined</p>
 					</>
@@ -74,10 +70,8 @@ export default function JS() {
 							a) let is block-scoped, while var is function-scoped.
 						</p>
 						<p id='q3b'>
-							<b>
-								b) let is block-scoped, while var is function-scoped and can be
-								redeclared.
-							</b>
+							b) let is block-scoped, while var is function-scoped and can be
+							redeclared.
 						</p>
 						<p id='q3c'>
 							c) let is function-scoped, while var is block-scoped.
@@ -132,9 +126,7 @@ export default function JS() {
 							b) A function that takes in a callback function as an argument
 						</p>
 						<p id='q4c'>
-							<b>
-								c) A function that has access to variables in its outer scope
-							</b>
+							c) A function that has access to variables in its outer scope
 						</p>
 						<p id='q4d'>
 							d) A function that is not bound to an object and has no this
@@ -174,7 +166,7 @@ export default function JS() {
 							b) == compares value and type while === compares only value
 						</p>
 						<p id='q5c'>
-							<b>c) == compares only value while === compares value and type</b>
+							c) == compares only value while === compares value and type
 						</p>
 						<p id='q5d'>d) There is no difference between the two</p>
 					</div>
@@ -200,9 +192,7 @@ export default function JS() {
 							<p>a) 0 1 2 3 4 5</p>
 							<p>b) 0 1 2 3 4 5 6</p>
 							<p>c) 1 2 3 4 5 6</p>
-							<p>
-								<b>d) 1 2 3 4 5</b>
-							</p>
+							<p>d) 1 2 3 4 5</p>
 						</>
 					)}
 				</div>
@@ -232,11 +222,9 @@ export default function JS() {
 						<code>null</code>?
 					</h3>
 					<p>
-						<b>
-							a) <code>undefined</code> means a variable has been declared but
-							has not yet been assigned a value, while <code>null</code> is an
-							assignment value representing no value or no object.
-						</b>
+						a) <code>undefined</code> means a variable has been declared but has
+						not yet been assigned a value, while <code>null</code> is an
+						assignment value representing no value or no object.
 					</p>
 					<p>
 						b) <code>undefined</code> is an assignment value representing no
@@ -283,9 +271,7 @@ export default function JS() {
 					<p>a) TypeError: Cannot read property foo of undefined</p>
 					<p>b) TypeError: foo is not a function</p>
 					<p>c) undefined</p>
-					<p>
-						<b>d) ReferenceError: foo is not defined</b>
-					</p>
+					<p>d) ReferenceError: foo is not defined</p>
 				</div>
 				<div
 					className='card back'
@@ -360,9 +346,7 @@ export default function JS() {
 						console.log(z);
 					</code>
 					<p>a) The sum of x and y is 11.</p>
-					<p>
-						<b>b) The sum of x and y is 56.</b>
-					</p>
+					<p>b) The sum of x and y is 56.</p>
 					<p>c) The sum of x and y is undefined.</p>
 					<p>d) SyntaxError: Invalid template string expression</p>
 				</div>
