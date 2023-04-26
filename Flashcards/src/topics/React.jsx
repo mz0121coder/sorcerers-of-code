@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import './topics.css';
+import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
 export default function ReactQuestions() {
+	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
 
 	const handleCardClick = index => {
@@ -10,192 +11,201 @@ export default function ReactQuestions() {
 		newFlippedCards[index] = !newFlippedCards[index];
 		setFlippedCards(newFlippedCards);
 	};
+
+	const handleNextCard = () => {
+		if (currentCardIndex < cards.length) {
+			setCurrentCardIndex(currentCardIndex + 1);
+		}
+	};
+
+	const handlePrevCard = () => {
+		if (currentCardIndex > 0) {
+			setCurrentCardIndex(currentCardIndex - 1);
+		}
+	};
+
 	return (
 		<>
-			<h1>React Quiz</h1>
-			{/* Question 1 */}
-			<ReactCardFlip isFlipped={flippedCards[0]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(0)}>
-					<h3>What is React?</h3>
-					<p>a) A back-end web development framework</p>
-					<p>b) A front-end web development framework</p>
-					<p>c) A programming language</p>
-					<p>d) A database management system</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(0)}>
-					<p>Answer: b) A front-end web development framework</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 2 */}
-			<ReactCardFlip isFlipped={flippedCards[1]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(1)}>
-					<h3>What is JSX?</h3>
-					<p>a) A programming language</p>
-					<p>b) A data structure</p>
-					<p>c) A templating engine</p>
-					<p>d) A syntax extension for JavaScript</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(1)}>
-					<p>Answer: d) A syntax extension for JavaScript</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 3 */}
-			<ReactCardFlip isFlipped={flippedCards[2]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(2)}>
-					<h3>What is the purpose of state in React?</h3>
-					<p>a) To store data that can be changed over time</p>
-					<p>b) To store data that is constant and never changes</p>
-					<p>c) To store data related to routing</p>
-					<p>d) To store data related to APIs</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(2)}>
-					<p>Answer: a) To store data that can be changed over time</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 4 */}
-			<ReactCardFlip isFlipped={flippedCards[3]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(3)}>
-					<h3>What is the difference between props and state in React?</h3>
-					<p id='q4a'>
-						a) Props are used to pass data between components, while state is
-						used to store data within a component.
-					</p>
-					<p id='q4b'>
-						b) State is used to pass data between components, while props is
-						used to store data within a component.
-					</p>
-					<p id='q4c'>
-						c) Props and state are interchangeable and can be used in the same
-						way.
-					</p>
-					<p id='q4d'>d) Props and state are not used in React.</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(3)}>
-					<p>
-						Answer: a) Props are used to pass data between components, while
-						state is used to store data within a component.
-					</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 5 */}
-			<ReactCardFlip isFlipped={flippedCards[4]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(4)}>
-					<h3>What is the virtual DOM in React?</h3>
-					<p id='q5a'>a) A physical representation of the DOM used in React</p>
-					<p id='q5b'>
-						b) A lightweight copy of the DOM used for performance optimization
-					</p>
-					<p id='q5c'>c) A tool used for debugging React applications</p>
-					<p id='q5d'>
-						d) A way to communicate between different components in React
-					</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(4)}>
-					<p>
-						Answer: b) A lightweight copy of the DOM used for performance
-						optimization
-					</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 6 */}
-			<ReactCardFlip isFlipped={flippedCards[5]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(5)}>
-					<h3>What is the purpose of a React component?</h3>
-					{!flippedCards[5] && (
-						<>
-							<p id='q6a'>
-								a) To encapsulate logic and UI into reusable pieces
-							</p>
-							<p id='q6b'>
-								b) To define the structure and layout of a web page
-							</p>
-							<p id='q6c'>c) To manage data in a React application</p>
-							<p id='q6d'>d) To handle routing in a React application</p>
-						</>
-					)}
-				</div>
-				<div className='card back' onClick={() => handleCardClick(5)}>
-					<p>Answer: a) To encapsulate logic and UI into reusable pieces</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 7 */}
-			<ReactCardFlip isFlipped={flippedCards[6]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(6)}>
-					<h3>
-						What is the difference between a class component and a functional
-						component in React?
-					</h3>
-					<p id='q7a'>
-						a) Class components use function declarations, while functional
-						components use class declarations
-					</p>
-					<p id='q7b'>
-						b) Class components use the this keyword, while functional
-						components do not
-					</p>
-					<p id='q7c'>
-						c) Class components are written using a class syntax, while
-						functional components are written using a function syntax
-					</p>
-					<p id='q7d'>
-						d) There is no difference between class components and functional
-						components
-					</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(6)}>
-					<p>
-						Answer: c) Class components are written using a class syntax, while
-						functional components are written using a function syntax
-					</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 8 */}
-			<ReactCardFlip isFlipped={flippedCards[7]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(7)}>
-					<h3>What is Redux?</h3>
-					<p>a) A back-end web development framework</p>
-					<p>b) A front-end web development framework</p>
-					<p>c) A state management library for JavaScript applications</p>
-					<p>d) A testing library for React applications</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(7)}>
-					<p>
-						Answer: c) A state management library for JavaScript applications
-					</p>
-				</div>
-			</ReactCardFlip>
-			{/* Question 9 */}
-			<ReactCardFlip isFlipped={flippedCards[8]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(8)}>
-					<h3>What is JSX in React?</h3>
-					<p>a) A JavaScript library for building user interfaces</p>
-					<p>b) A templating language for creating HTML markup</p>
-					<p>
-						c) A syntax extension for JavaScript that allows for HTML-like code
-						to be written in JavaScript
-					</p>
-					<p>d) A package manager for React applications</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(8)}>
-					<p>
-						Answer: c) A syntax extension for JavaScript that allows for
-						HTML-like code to be written in JavaScript
-					</p>
-				</div>
-			</ReactCardFlip>{' '}
-			{/* Question 10 */}
-			<ReactCardFlip isFlipped={flippedCards[9]} flipDirection='horizontal'>
-				<div className='card front' onClick={() => handleCardClick(9)}>
-					<h3>What is the purpose of the useEffect hook in React?</h3>
-					<p>a) To handle form submissions in React</p>
-					<p>b) To perform side effects in functional components</p>
-					<p>c) To manage state in class components</p>
-					<p>d) To handle routing in a React application</p>
-				</div>
-				<div className='card back' onClick={() => handleCardClick(9)}>
-					<p>Answer: b) To perform side effects in functional components</p>
-				</div>
-			</ReactCardFlip>
+			<header>
+				<button>Go back to homepage</button>
+			</header>
+			<h1>React Flashcards</h1>
+
+			<div className='card-container'>
+				<ReactCardFlip
+					isFlipped={flippedCards[currentCardIndex]}
+					flipDirection='horizontal'>
+					<div
+						className='card front'
+						style={{ backgroundColor: 'lightgrey' }}
+						onClick={() => handleCardClick(currentCardIndex)}>
+						<h3>{cards[currentCardIndex].question}</h3>
+						{cards[currentCardIndex].options.map((option, index) => (
+							<p key={index}>{option}</p>
+						))}
+					</div>
+					<div
+						className='card back'
+						style={{ backgroundColor: 'lightgrey' }}
+						onClick={() => handleCardClick(currentCardIndex)}>
+						<p>Answer: {cards[currentCardIndex].answer}</p>
+					</div>
+				</ReactCardFlip>
+			</div>
+
+			<div className='button-container'>
+				{currentCardIndex > 0 && <button onClick={handlePrevCard}>Prev</button>}
+				{currentCardIndex < cards.length - 1 && (
+					<button onClick={handleNextCard}>Next</button>
+				)}
+			</div>
 		</>
 	);
 }
+
+const cards = [
+	{
+		question: 'What is React?',
+		options: [
+			'a) A front-end web development framework',
+			'b) A back-end web development framework',
+			'c) A database management system',
+			'd) A programming language',
+		],
+		answer: 'a) A front-end web development framework',
+	},
+	{
+		question: 'What is the purpose of the render() method in React?',
+		options: [
+			'a) To handle user input in a React application',
+			'b) To update the DOM with new React elements',
+			'c) To handle HTTP requests in a React application',
+			'd) To manage state in a React component',
+		],
+		answer: 'b) To update the DOM with new React elements',
+	},
+	{
+		question: 'What is a state in React?',
+		options: [
+			'a) An object that holds data for a component',
+			'b) A function that returns a React element',
+			'c) A method that updates the DOM',
+			'd) A function that handles user input',
+		],
+		answer: 'a) An object that holds data for a component',
+	},
+	{
+		question: 'What is a prop in React?',
+		options: [
+			'a) An object that holds data for a component',
+			'b) A function that returns a React element',
+			'c) A method that updates the DOM',
+			'd) A function that handles user input',
+		],
+		answer: 'a) An object that holds data for a component',
+	},
+	{
+		question: 'What is JSX in React?',
+		options: [
+			'a) A JavaScript library for building user interfaces',
+			'b) A syntax extension for JavaScript',
+			'c) A CSS framework for styling React components',
+			'd) A package manager for React applications',
+		],
+		answer: 'b) A syntax extension for JavaScript',
+	},
+	{
+		question: 'What is the purpose of keys in React?',
+		options: [
+			'a) To identify elements in an array',
+			'b) To add unique identifiers to components',
+			'c) To manage state in a React component',
+			'd) To handle user input in a React application',
+		],
+		answer: 'a) To identify elements in an array',
+	},
+	{
+		question: 'What is a React hook?',
+		options: [
+			'a) A function that handles user input',
+			'b) A way to add state to a functional component',
+			'c) A method that updates the DOM',
+			'd) A library for managing HTTP requests in a React application',
+		],
+		answer: 'b) A way to add state to a functional component',
+	},
+	{
+		question: 'What is the purpose of useEffect in React?',
+		options: [
+			'a) To handle user input in a React application',
+			'b) To perform side effects in functional components',
+			'c) To manage state in class components',
+			'd) To handle routing in a React application',
+		],
+		answer: 'b) To perform side effects in functional components',
+	},
+	{
+		question: 'What is a React component?',
+		options: [
+			'a) A function that handles user input',
+			'b) A way to reuse UI code',
+			'c) A method that updates the DOM',
+			'd) A library for managing HTTP requests in a React application',
+		],
+		answer: 'b) A way to reuse UI code',
+	},
+	{
+		question:
+			'What is the difference between a functional component and a class component in React?',
+		options: [
+			'a) A functional component can have state, while a class component cannot',
+			'b) A class component can have state, while a functional component cannot',
+			'c) A functional component is faster than a class component',
+			'd) A class component is faster than a functional component',
+		],
+		answer:
+			'b) A class component can have state, while a functional component cannot',
+	},
+	{
+		question: 'What is the virtual DOM in React?',
+		options: [
+			'a) A virtual environment where React components are tested',
+			'b) A JavaScript object that represents the actual DOM',
+			'c) A way to optimize React rendering performance',
+			'd) A library for managing HTTP requests in a React application',
+		],
+		answer: 'b) A JavaScript object that represents the actual DOM',
+	},
+	{
+		question: 'What is the difference between props and state in React?',
+		options: [
+			'a) Props are used to pass data from parent to child components, while state is used for managing data within a component',
+			'b) Props are used to manage data within a component, while state is used to pass data from parent to child components',
+			'c) Props and state are the same thing in React',
+			'd) Props are used for handling user input, while state is used for managing data within a component',
+		],
+		answer:
+			'a) Props are used to pass data from parent to child components, while state is used for managing data within a component',
+	},
+	{
+		question: 'What is the purpose of conditional rendering in React?',
+		options: [
+			'a) To improve the performance of React applications',
+			'b) To add dynamic behavior to React components',
+			'c) To handle user input in a React application',
+			'd) To conditionally display elements in a React component',
+		],
+		answer: 'd) To conditionally display elements in a React component',
+	},
+	{
+		question:
+			'What is the purpose of the shouldComponentUpdate() method in React?',
+		options: [
+			'a) To update the DOM with new React elements',
+			'b) To handle user input in a React application',
+			'c) To determine whether a component should re-render',
+			'd) To manage state in a React component',
+		],
+		answer: 'c) To determine whether a component should re-render',
+	},
+];
