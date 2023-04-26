@@ -1,6 +1,8 @@
 import './App.css';
 // import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
+// import song from './DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
+
 
 function App() {
 	const navigate = useNavigate();
@@ -10,7 +12,7 @@ function App() {
 	const handleReactClick = () => navigate('/React');
 
 	return (
-		<>
+	<>	 
 			<img
 				src='./src/assets/logo.png'
 				alt='SoC company logo'
