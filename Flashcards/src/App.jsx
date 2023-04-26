@@ -12,7 +12,7 @@ function App() {
 	return (
 		<>
 			<img
-				src='./src/assets/logo.jpg'
+				src='./src/assets/logo.png'
 				alt='SoC company logo'
 				width={400}
 				height={400}
