@@ -1,6 +1,11 @@
-import { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from "react"
 import './topics.css';
-import song from '../topics/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
+import AudioPlayer from "./AudioPlayer";
+// import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
+// import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
+// import song3 from '../topics/music/MusicianStringTrio.mp3';
+
 
 
 export default function JS() {
@@ -11,10 +16,32 @@ export default function JS() {
 		newFlippedCards[index] = !newFlippedCards[index];
 		setFlippedCards(newFlippedCards);
 	};
+	
+// const [isPlaying, setIsPlaying] = useState(true);
+
+// 	const handleCheckboxClick = () => {
+//     setIsPlaying(!isPlaying);
+
+// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
+    
+// 	if (!isPlaying) {
+//       audioplay.play();
+//     } else {
+//       audioplay.pause();
+//     }
+// }
 	return (
 		<>
-		<h3>Study Music</h3>
-		<div><audio src={song} autoPlay loop controls /></div>
+		<h3>Study Music</h3> <AudioPlayer/>
+		
+		{/* <div><audio src={song} loop controls />
+		<audio src={song2}  loop controls />
+		<audio src={song3} loop controls/></div> */}
+		{/* <div>
+		<label>
+        <input type="checkbox" onClick={handleCheckboxClick} />
+        Play Audio
+      </label></div> */}
 			<h1>JavaScript</h1>
 			{/* Question 1 */}
 			<div

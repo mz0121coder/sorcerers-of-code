@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './topics.css';
-import song from '../topics/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
-
+import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
+import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
+import song3 from '../topics/music/MusicianStringTrio.mp3';
 
 export default function CSS() {
 	const [flippedCards, setFlippedCards] = useState([]);
@@ -14,7 +15,9 @@ export default function CSS() {
 	return (
 		<>
 		<h3>Study Music</h3>
-		<div><audio src={song} autoPlay loop controls /></div>
+		<div><audio src={song} loop controls />
+		<audio src={song2}  loop controls />
+		<audio src={song3} loop controls/></div>
 			<h1>CSS</h1>
 			{/* // Question 1 */}
 			<div
@@ -264,4 +267,5 @@ export default function CSS() {
 			</div>
 		</>
 	);
+	
 }
