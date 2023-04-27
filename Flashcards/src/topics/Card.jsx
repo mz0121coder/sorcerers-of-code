@@ -2,8 +2,7 @@ import { useState } from 'react';
 import './topics.css';
 import ReactCardFlip from 'react-card-flip';
 
-
-export default function Card({cards}) {
+export default function Card({ cards }) {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
 
@@ -25,7 +24,7 @@ export default function Card({cards}) {
 		}
 	};
 
-    return (
+	return (
 		<>
 			<div className='card-container'>
 				<ReactCardFlip
@@ -33,7 +32,6 @@ export default function Card({cards}) {
 					flipDirection='horizontal'>
 					<div
 						className='card front'
-						style={{ backgroundColor: 'lightgrey' }}
 						onClick={() => handleCardClick(currentCardIndex)}>
 						<h3>{cards[currentCardIndex].question}</h3>
 						{cards[currentCardIndex].options.map((option, index) => (
@@ -42,7 +40,6 @@ export default function Card({cards}) {
 					</div>
 					<div
 						className='card back'
-						style={{ backgroundColor: 'lightgrey' }}
 						onClick={() => handleCardClick(currentCardIndex)}>
 						<p>Answer: {cards[currentCardIndex].answer}</p>
 					</div>

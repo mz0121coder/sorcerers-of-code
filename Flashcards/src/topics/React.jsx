@@ -1,5 +1,5 @@
 import './topics.css';
-import gif from '../assets/JavaScript-frameworks.gif';
+import gif from '../assets/JavaScript-frameworks2.gif';
 import AudioPlayer from './AudioPlayer';
 import Card from './Card';
 import logo from '../assets/logo.png';

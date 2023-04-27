@@ -1,52 +1,68 @@
-body {
+/* body {
   background-color: #fff;
-}
+} */
 
 audio {
-        width: 210px;
-        height: 100px;
-        border-radius: 15%;
-        background-color: #d98713;
-        margin: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      
-      }
+  width: 210px;
+  height: 100px;
+  border-radius: 15%;
+  background-color: #d98713;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+img {
+  margin: 30px 30px 0px 30px;
+}
+
+.card-container {
+  /* margin: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 20px;
   margin: 15px;
-  background-color: lightgray;
-  min-width: 400px;
+  background-color: #212A3E;
+  min-width: 300px;
   height: auto;
   min-height: 250px;
+  color: white;
+}
+
+.card h3 {
+  font-size: 2rem;
+}
+
+.card p {
+  font-size: 1.4rem;
 }
 
 .button-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-      
-      .button-container button {
-        background-color: #00ffff;
-        color: #2b2b2b;
-        font-size: 1.5rem;
-        border: none;
-        border-radius: 1rem;
-        margin: 1rem;
-        padding: 1rem 2rem;
-        cursor: pointer;
-        box-shadow: 0px 0px 20px #00ffff;
-        transition: all 0.3s ease-in-out;
-      }
-      
-      .button-container button:hover {
-        background-color: #2b2b2b;
-        color: #00ffff;
-        box-shadow: 0px 0px 30px #00ffff;
-      }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-container button {
+  background-color: #d98713;
+  color: #2b2b2b;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px #d98713;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-container button:hover {
+  background-color: #2b2b2b;
+  color: #d98713;
+  box-shadow: 0px 0px 30px #d98713;
+}

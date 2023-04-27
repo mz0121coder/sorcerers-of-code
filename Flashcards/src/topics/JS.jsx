@@ -2,7 +2,7 @@ import './topics.css';
 import AudioPlayer from './AudioPlayer';
 import Card from './Card';
 import logo from '../assets/logo.png';
-import study from '../assets/study.gif';
+import study2 from '../assets/study2.gif';
 
 export default function JS() {
 	const handleLogoClick = () => {
@@ -18,7 +18,12 @@ export default function JS() {
 				width={300}
 				height={300}
 			/>
-			<img src={study} alt='gif of someone studying' width={300} height={300} />
+			<img
+				src={study2}
+				alt='gif of someone studying'
+				width={300}
+				height={300}
+			/>
 			<h1>JavaScript Flashcards</h1>
 			<AudioPlayer />
 			<Card cards={cards} />

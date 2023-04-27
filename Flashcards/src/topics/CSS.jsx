@@ -2,7 +2,7 @@ import './topics.css';
 import AudioPlayer from './AudioPlayer';
 import Card from './Card';
 import logo from '../assets/logo.png';
-import CSSgif from '../assets/CSS-animation.gif';
+import CSSgif from '../assets/CSS-animation2.gif';
 
 export default function CSS() {
 	const handleLogoClick = () => {
