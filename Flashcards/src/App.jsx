@@ -1,5 +1,7 @@
 import './App.css';
 import { useNavigate } from 'react-router-dom';
+import song4 from './topics/music/ghostwriter_heart_on_my_sleeve.mp3'
+import logo from './assets/logo.png';
 
 function App() {
 	const navigate = useNavigate();
@@ -12,12 +14,15 @@ function App() {
 		// <a href="https://storyset.com/web">Web illustrations by Storyset</a>
 		<div className='container'>
 			<img
-				src='./src/assets/logo.png'
+				src={logo}
 				alt='SoC company logo'
 				width={400}
 				height={400}
 				className='logo'
 			/>
+			<div>
+				<audio className='homeSong' src={song4} controls />
+			</div>
 			<div className='text-container'>
 				<h1 className='title'>
 					Welcome to
