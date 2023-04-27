@@ -5,7 +5,6 @@ import Card from './Card';
 import logo from '../assets/logo.png';
 
 export default function ReactQuestions() {
-	
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};
@@ -20,9 +19,9 @@ export default function ReactQuestions() {
 				height={300}
 			/>
 
-			<img src={gif} width={300} height={300} alt ="React gif"/>
-			<AudioPlayer />
+			<img src={gif} width={300} height={300} alt='React gif' />
 			<h1>React Flashcards</h1>
+			<AudioPlayer />
 			<Card cards={cards} />
 		</>
 	);

@@ -4,7 +4,7 @@ import Card from './Card';
 import logo from '../assets/logo.png';
 import CSSgif from '../assets/CSS-animation.gif';
 
-export default function CSS() {
+export default function Card() {
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};
@@ -19,8 +19,8 @@ export default function CSS() {
 				height={300}
 			/>
 			<img src={CSSgif} alt='CSS gif' width={300} height={300} />
-			<AudioPlayer />
 			<h1>CSS Flashcards</h1>
+			<AudioPlayer />
 			<Card cards={cards} />
 		</>
 	);

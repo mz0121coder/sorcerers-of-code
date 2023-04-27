@@ -18,9 +18,9 @@ export default function JS() {
 				width={300}
 				height={300}
 			/>
-			<img src={study} alt='gif of someone studying' width={300} height={300}/>
-			<AudioPlayer />
+			<img src={study} alt='gif of someone studying' width={300} height={300} />
 			<h1>JavaScript Flashcards</h1>
+			<AudioPlayer />
 			<Card cards={cards} />
 		</>
 	);

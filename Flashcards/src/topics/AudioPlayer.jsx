@@ -4,26 +4,25 @@ import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Song
 import song3 from '../topics/music/MusicianStringTrio.mp3';
 
 const AudioPlayer = () => {
-  // const audio1 = useRef(null);
+	// const audio1 = useRef(null);
 	// function handleAudio() {
 	// 	console.log('hello', audio1.current);
 	// 	audio1.current.pause();
 	// }
 
-  
-// const [isPlaying, setIsPlaying] = useState(true);
+	// const [isPlaying, setIsPlaying] = useState(true);
 
-// 	const handleCheckboxClick = () => {
-//     setIsPlaying(!isPlaying);
+	// 	const handleCheckboxClick = () => {
+	//     setIsPlaying(!isPlaying);
 
-// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
+	// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
 
-// 	if (!isPlaying) {
-//       audioplay.play();
-//     } else {
-//       audioplay.pause();
-//     }
-// }
+	// 	if (!isPlaying) {
+	//       audioplay.play();
+	//     } else {
+	//       audioplay.pause();
+	//     }
+	// }
 
 	// const [currentAudio, setCurrentAudio] = useState(null);
 
@@ -57,7 +56,7 @@ const AudioPlayer = () => {
 
 	return (
 		<div className=''>
-		<h3>Study Music</h3>
+			<h2>Study Music</h2>
 			<audio src={song} controls />
 			<audio src={song2} controls />
 			<audio src={song3} controls />
