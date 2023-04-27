@@ -8,6 +8,7 @@ import AudioPlayer from './AudioPlayer';
 
 import ReactCardFlip from 'react-card-flip';
 import logo from '../assets/logo.png'
+import study from '../assets/study.gif'
 
 // const [isPlaying, setIsPlaying] = useState(true);
 
@@ -54,6 +55,7 @@ export default function JS() {
 
 
                 <img src={logo} alt='Logo' onClick={handleLogoClick} width= {200} height={200}/>
+				<img src={study} alt='gif of someone studying' />
             
 
 			<AudioPlayer />

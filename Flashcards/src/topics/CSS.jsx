@@ -3,6 +3,7 @@ import AudioPlayer from './AudioPlayer';
 import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import logo from '../assets/logo.png'
+import CSSgif from '../assets/CSS-animation.gif'
 
 // import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
 // import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
@@ -38,7 +39,7 @@ export default function CSS() {
 		<>
 		
 				<img src={logo} alt='Logo' onClick={handleLogoClick} width= {200} height={200}/>
-			
+			<img src={CSSgif} alt = 'CSS gif'/>
 			<AudioPlayer />
 			<h1>CSS Flashcards</h1>
 
