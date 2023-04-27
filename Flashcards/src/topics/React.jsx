@@ -1,18 +1,11 @@
 import { useState } from 'react';
 import './topics.css';
 import gif from '../assets/JavaScript-frameworks.gif';
-// import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
-// import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
 import AudioPlayer from './AudioPlayer';
 import ReactCardFlip from 'react-card-flip';
 import logo from '../assets/logo.png';
 
 export default function ReactQuestions() {
-	// const audio1 = useRef(null);
-	// function handleAudio() {
-	// 	console.log('hello', audio1.current);
-	// 	audio1.current.pause();
-	// }
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
 
