@@ -4,7 +4,7 @@ import Card from './Card';
 import logo from '../assets/logo.png';
 import CSSgif from '../assets/CSS-animation.gif';
 
-export default function Card() {
+export default function CSS() {
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};

@@ -3,7 +3,7 @@ import './topics.css';
 import ReactCardFlip from 'react-card-flip';
 
 
-export default function CSS({cards}) {
+export default function Card({cards}) {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
 
