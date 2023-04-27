@@ -1,32 +1,10 @@
 import './topics.css';
 import AudioPlayer from './AudioPlayer';
-import { useState } from 'react';
-import ReactCardFlip from 'react-card-flip';
+import Card from './Card';
 import logo from '../assets/logo.png';
 import CSSgif from '../assets/CSS-animation.gif';
 
 export default function CSS() {
-	const [currentCardIndex, setCurrentCardIndex] = useState(0);
-	const [flippedCards, setFlippedCards] = useState([]);
-
-	const handleCardClick = index => {
-		const newFlippedCards = [...flippedCards];
-		newFlippedCards[index] = !newFlippedCards[index];
-		setFlippedCards(newFlippedCards);
-	};
-
-	const handleNextCard = () => {
-		if (currentCardIndex < cards.length) {
-			setCurrentCardIndex(currentCardIndex + 1);
-		}
-	};
-
-	const handlePrevCard = () => {
-		if (currentCardIndex > 0) {
-			setCurrentCardIndex(currentCardIndex - 1);
-		}
-	};
-
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};
@@ -43,35 +21,7 @@ export default function CSS() {
 			<img src={CSSgif} alt='CSS gif' width={300} height={300} />
 			<AudioPlayer />
 			<h1>CSS Flashcards</h1>
-
-			<div className='card-container'>
-				<ReactCardFlip
-					isFlipped={flippedCards[currentCardIndex]}
-					flipDirection='horizontal'>
-					<div
-						className='card front'
-						style={{ backgroundColor: 'lightgrey' }}
-						onClick={() => handleCardClick(currentCardIndex)}>
-						<h3>{cards[currentCardIndex].question}</h3>
-						{cards[currentCardIndex].options.map((option, index) => (
-							<p key={index}>{option}</p>
-						))}
-					</div>
-					<div
-						className='card back'
-						style={{ backgroundColor: 'lightgrey' }}
-						onClick={() => handleCardClick(currentCardIndex)}>
-						<p>Answer: {cards[currentCardIndex].answer}</p>
-					</div>
-				</ReactCardFlip>
-			</div>
-
-			<div className='button-container'>
-				{currentCardIndex > 0 && <button onClick={handlePrevCard}>Prev</button>}
-				{currentCardIndex < cards.length - 2 && (
-					<button onClick={handleNextCard}>Next</button>
-				)}
-			</div>
+			<Card cards={cards} />
 		</>
 	);
 }

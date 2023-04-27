@@ -1,34 +1,10 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
 import './topics.css';
 import AudioPlayer from './AudioPlayer';
-
-import ReactCardFlip from 'react-card-flip';
+import Card from './Card';
 import logo from '../assets/logo.png';
 import study from '../assets/study.gif';
 
 export default function JS() {
-	const [currentCardIndex, setCurrentCardIndex] = useState(0);
-	const [flippedCards, setFlippedCards] = useState([]);
-
-	const handleCardClick = index => {
-		const newFlippedCards = [...flippedCards];
-		newFlippedCards[index] = !newFlippedCards[index];
-		setFlippedCards(newFlippedCards);
-	};
-
-	const handleNextCard = () => {
-		if (currentCardIndex < cards.length) {
-			setCurrentCardIndex(currentCardIndex + 1);
-		}
-	};
-
-	const handlePrevCard = () => {
-		if (currentCardIndex > 0) {
-			setCurrentCardIndex(currentCardIndex - 1);
-		}
-	};
-
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};
@@ -42,39 +18,10 @@ export default function JS() {
 				width={300}
 				height={300}
 			/>
-			<img src={study} alt='gif of someone studying' width={300} height={300} />
-
+			<img src={study} alt='gif of someone studying' width={300} height={300}/>
 			<AudioPlayer />
 			<h1>JavaScript Flashcards</h1>
-
-			<div className='card-container'>
-				<ReactCardFlip
-					isFlipped={flippedCards[currentCardIndex]}
-					flipDirection='horizontal'>
-					<div
-						className='card front'
-						style={{ backgroundColor: 'lightgrey' }}
-						onClick={() => handleCardClick(currentCardIndex)}>
-						<h3>{cards[currentCardIndex].question}</h3>
-						{cards[currentCardIndex].options.map((option, index) => (
-							<p key={index}>{option}</p>
-						))}
-					</div>
-					<div
-						className='card back'
-						style={{ backgroundColor: 'lightgrey' }}
-						onClick={() => handleCardClick(currentCardIndex)}>
-						<p>Answer: {cards[currentCardIndex].answer}</p>
-					</div>
-				</ReactCardFlip>
-			</div>
-
-			<div className='button-container'>
-				{currentCardIndex > 0 && <button onClick={handlePrevCard}>Prev</button>}
-				{currentCardIndex < cards.length - 1 && (
-					<button onClick={handleNextCard}>Next</button>
-				)}
-			</div>
+			<Card cards={cards} />
 		</>
 	);
 }
