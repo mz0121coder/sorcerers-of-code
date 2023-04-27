@@ -19,6 +19,7 @@ img {
   min-width: 250px;
   max-width: 350px;
   height: auto;
+  margin-bottom: 6vh;
 }
 
 .button-container {
@@ -118,4 +119,13 @@ body {
     justify-content: center;
     margin-top: 2rem;
   }
+}
+
+  .homeSong {
+    width: 210px;
+    height: 100px;
+    border-radius: 15%;
+    margin: 10px;
+    background-color: #d98713;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
