@@ -1,42 +1,105 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.button {
+  background-color: #00ffff;
+  color: #2b2b2b;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px #00ffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2b2b2b;
+  color: #00ffff;
+  box-shadow: 0px 0px 30px #00ffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #000;
+}
+
+.text-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.text-container h1 {
+  margin: 0;
+  font-size: 125px;
+  color: rgba(225, 225, 225, .01);
+  background-image: url("./assets/puzzle.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  animation: animate 15s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@keyframes animate {
+  0%, 100% {
+    background-position: left top;
   }
-  to {
-    transform: rotate(360deg);
+
+  25% {
+    background-position: right bottom;
+  }
+
+  50% {
+    background-position: left bottom;
+  }
+
+  75% {
+    background-position: right top;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+
+  /* adjust h1 font size for smaller screens */
+  .text-container h1 {
+    font-size: 100px;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media screen and (max-width: 480px) {
 
-.read-the-docs {
-  color: #888;
-} */
+  /* adjust h1 font size for even smaller screens */
+  .text-container h1 {
+    font-size: 60px;
+  }
+}
