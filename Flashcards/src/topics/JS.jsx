@@ -1,7 +1,26 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import './topics.css';
-import { useState } from 'react';
+import AudioPlayer from './AudioPlayer';
+// import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
+// import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
+// import song3 from '../topics/music/MusicianStringTrio.mp3';
+
 import ReactCardFlip from 'react-card-flip';
 
+// const [isPlaying, setIsPlaying] = useState(true);
+
+// 	const handleCheckboxClick = () => {
+//     setIsPlaying(!isPlaying);
+
+// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
+
+// 	if (!isPlaying) {
+//       audioplay.play();
+//     } else {
+//       audioplay.pause();
+//     }
+// }
 export default function JS() {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
@@ -26,6 +45,7 @@ export default function JS() {
 
 	return (
 		<>
+			<AudioPlayer />
 			<header>
 				<button>Go back to homepage</button>
 			</header>
