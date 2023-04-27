@@ -5,6 +5,7 @@ import gif from '../assets/JavaScript-frameworks.gif';
 // import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
 import AudioPlayer from './AudioPlayer';
 import ReactCardFlip from 'react-card-flip';
+import logo from '../assets/logo.png'
 
 export default function ReactQuestions() {
 	// const audio1 = useRef(null);
@@ -33,8 +34,17 @@ export default function ReactQuestions() {
 		}
 	};
 
+	const handleLogoClick = () => {
+		window.location.href = '/';
+	};
+
 	return (
 		<>
+
+     
+          <img src={logo} alt='Logo' onClick={handleLogoClick} width= {200} height={200}/>
+           
+
 			<img src={gif}></img>
 			<AudioPlayer />
 			<h1>React Flashcards</h1>

@@ -37,9 +37,9 @@ const AudioPlayer = () => {
 
 	return (
 		<div className=''>
-			<audio src={song} onClick={handleAudioClick} controls />
+			<audio src={song} controls onClick={handleAudioClick}  />
 			<audio src={song2} controls onClick={handleAudioClick} />
-			<audio src={song3} onClick={handleAudioClick} controls />
+			<audio src={song3} controls onClick={handleAudioClick} />
 		</div>
 	);
 };
