@@ -11,3 +11,6 @@ By having one app to keep flashcards as well as useful links for various topics,
 ## User Journey
 
 ![User Flow](./User-Flow.jpg) 
+![Early Wireframing for landing page](./EarlyWireframe.png)
+![hi-fi wireframe of landing page](./wireframe-homePage.png)
+![hi-fi wireframe of content page](./wireframe-reactPage.png)
