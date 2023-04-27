@@ -7,7 +7,6 @@ import ReactCardFlip from 'react-card-flip';
 // import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
 // import song3 from '../topics/music/MusicianStringTrio.mp3';
 
-
 export default function CSS() {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
@@ -32,10 +31,7 @@ export default function CSS() {
 
 	return (
 		<>
-		<AudioPlayer/>
-			<header>
-				<button>Go back to homepage</button>
-			</header>
+			<AudioPlayer />
 			<h1>CSS Flashcards</h1>
 
 			<div className='card-container'>

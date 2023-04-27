@@ -1,5 +1,6 @@
-import { useState, } from 'react';
+import { useState } from 'react';
 import './topics.css';
+import gif from '../assets/JavaScript-frameworks.gif';
 // import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
 // import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
 import AudioPlayer from './AudioPlayer';
@@ -34,10 +35,8 @@ export default function ReactQuestions() {
 
 	return (
 		<>
-		<AudioPlayer/>
-			<header>
-				<button>Go back to homepage</button>
-			</header>
+			<img src={gif}></img>
+			<AudioPlayer />
 			<h1>React Flashcards</h1>
 
 			<div className='card-container'>

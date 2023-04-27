@@ -46,9 +46,6 @@ export default function JS() {
 	return (
 		<>
 			<AudioPlayer />
-			<header>
-				<button>Go back to homepage</button>
-			</header>
 			<h1>JavaScript Flashcards</h1>
 
 			<div className='card-container'>
