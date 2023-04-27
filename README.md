@@ -16,6 +16,7 @@ By having one app to keep flashcards as well as useful links for various topics,
 
 ![Early Wireframing for landing page](./EarlyWireframe.png)
 
+![wireframing for content page](./lo-fi-frame_for_page.png)
 ## hi-fi wireframe of landing page
 ![hi-fi wireframe of landing page](./wireframe-homePage.png)
 ## hi-fi wireframe of content page
