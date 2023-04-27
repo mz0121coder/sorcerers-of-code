@@ -5,10 +5,6 @@ import ReactCardFlip from 'react-card-flip';
 import logo from '../assets/logo.png';
 import CSSgif from '../assets/CSS-animation.gif';
 
-// import song from '../topics/music/DanielVeesey-SonataNo_19inGMinor_Op_49_No_1 _ I_Andante.mp3';
-// import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3';
-// import song3 from '../topics/music/MusicianStringTrio.mp3';
-
 export default function CSS() {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);

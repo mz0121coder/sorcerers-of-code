@@ -24,7 +24,6 @@ img {
 
 .button-container {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -97,7 +96,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
   /* adjust h1 font size for smaller screens */
   .text-container h1 {
     font-size: 100px;
@@ -105,7 +103,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-
   /* adjust h1 font size for even smaller screens */
   .text-container h1 {
     font-size: 60px;

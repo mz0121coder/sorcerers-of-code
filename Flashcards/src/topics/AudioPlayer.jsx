@@ -5,6 +5,27 @@ import song2 from '../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Song
 import song3 from '../topics/music/MusicianStringTrio.mp3';
 
 const AudioPlayer = () => {
+  // const audio1 = useRef(null);
+	// function handleAudio() {
+	// 	console.log('hello', audio1.current);
+	// 	audio1.current.pause();
+	// }
+
+  
+// const [isPlaying, setIsPlaying] = useState(true);
+
+// 	const handleCheckboxClick = () => {
+//     setIsPlaying(!isPlaying);
+
+// 	const audioplay = new audioplay("../topics/music/Vassily_Primakov_piano-Felix_Mendelssohn_Songs_Without_Words.mp3");
+
+// 	if (!isPlaying) {
+//       audioplay.play();
+//     } else {
+//       audioplay.pause();
+//     }
+// }
+
 	const [currentAudio, setCurrentAudio] = useState(null);
 
 	useEffect(() => {
