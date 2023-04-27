@@ -7,8 +7,8 @@ import AudioPlayer from './AudioPlayer';
 // import song3 from '../topics/music/MusicianStringTrio.mp3';
 
 import ReactCardFlip from 'react-card-flip';
-import logo from '../assets/logo.png'
-import study from '../assets/study.gif'
+import logo from '../assets/logo.png';
+import study from '../assets/study.gif';
 
 // const [isPlaying, setIsPlaying] = useState(true);
 
@@ -48,15 +48,17 @@ export default function JS() {
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};
-	
 
 	return (
 		<>
-
-
-                <img src={logo} alt='Logo' onClick={handleLogoClick} width= {200} height={200}/>
-				<img src={study} alt='gif of someone studying' />
-            
+			<img
+				src={logo}
+				alt='Logo'
+				onClick={handleLogoClick}
+				width={300}
+				height={300}
+			/>
+			<img src={study} alt='gif of someone studying' width={300} height={300} />
 
 			<AudioPlayer />
 			<h1>JavaScript Flashcards</h1>

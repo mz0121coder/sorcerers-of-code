@@ -15,8 +15,15 @@
   box-sizing: border-box;
 }
 
+img {
+  min-width: 250px;
+  max-width: 350px;
+  height: auto;
+}
+
 .button-container {
   display: flex;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -101,5 +108,14 @@ body {
   /* adjust h1 font size for even smaller screens */
   .text-container h1 {
     font-size: 60px;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
   }
 }

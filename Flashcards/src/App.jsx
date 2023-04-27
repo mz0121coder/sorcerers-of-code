@@ -19,7 +19,10 @@ function App() {
 				className='logo'
 			/>
 			<div className='text-container'>
-				<h1 className='title'>Welcome to CodeCards</h1>
+				<h1 className='title'>
+					Welcome to
+					<br /> CodeCards
+				</h1>
 			</div>
 			<div className='button-container'>
 				<button className='button' onClick={handleCssClick}>
