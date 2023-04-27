@@ -1,3 +1,7 @@
+body {
+  background-color: #fff;
+}
+
 .card {
   display: flex;
   align-items: center;
