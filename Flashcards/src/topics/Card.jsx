@@ -1,27 +1,60 @@
-import { useState } from "react";
-// import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
+import './topics.css';
+import ReactCardFlip from 'react-card-flip';
 
-export default function Card({card}) {
-    const [flip, setFlip] = useState(true);
-    // let answerId = uuidv4();
+
+export default function CSS({cards}) {
+	const [currentCardIndex, setCurrentCardIndex] = useState(0);
+	const [flippedCards, setFlippedCards] = useState([]);
+
+	const handleCardClick = index => {
+		const newFlippedCards = [...flippedCards];
+		newFlippedCards[index] = !newFlippedCards[index];
+		setFlippedCards(newFlippedCards);
+	};
+
+	const handleNextCard = () => {
+		if (currentCardIndex < cards.length) {
+			setCurrentCardIndex(currentCardIndex + 1);
+		}
+	};
+
+	const handlePrevCard = () => {
+		if (currentCardIndex > 0) {
+			setCurrentCardIndex(currentCardIndex - 1);
+		}
+	};
+
     return (
-        <div className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)}>
-            {/* <div className="front">{card.question}  
-                <div className="card-answers">
-                    {card.answers.map((answer => {
-                        return <p>{answer}</p>
-                    }))}
-                </div>
-            </div>
-            <div className="back">{card.correctAnswer}</div> */}
-        {flip? <div className="front">{card.question}  
-                <div className="card-answers">
-                    {card.answers.map((answer,index) => {
-                        return <p key ={index} >{answer}</p>
-                    }))}
-                </div>
-            </div> : <div className="back">{card.correctAnswer}</div>}
-        </div>
-    )
-}
+		<>
+			<div className='card-container'>
+				<ReactCardFlip
+					isFlipped={flippedCards[currentCardIndex]}
+					flipDirection='horizontal'>
+					<div
+						className='card front'
+						style={{ backgroundColor: 'lightgrey' }}
+						onClick={() => handleCardClick(currentCardIndex)}>
+						<h3>{cards[currentCardIndex].question}</h3>
+						{cards[currentCardIndex].options.map((option, index) => (
+							<p key={index}>{option}</p>
+						))}
+					</div>
+					<div
+						className='card back'
+						style={{ backgroundColor: 'lightgrey' }}
+						onClick={() => handleCardClick(currentCardIndex)}>
+						<p>Answer: {cards[currentCardIndex].answer}</p>
+					</div>
+				</ReactCardFlip>
+			</div>
 
+			<div className='button-container'>
+				{currentCardIndex > 0 && <button onClick={handlePrevCard}>Prev</button>}
+				{currentCardIndex < cards.length - 2 && (
+					<button onClick={handleNextCard}>Next</button>
+				)}
+			</div>
+		</>
+	);
+}
