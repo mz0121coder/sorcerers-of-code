@@ -57,6 +57,7 @@ const AudioPlayer = () => {
 
 	return (
 		<div className=''>
+		<h3>Study Music</h3>
 			<audio src={song} controls />
 			<audio src={song2} controls />
 			<audio src={song3} controls />
