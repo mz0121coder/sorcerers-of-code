@@ -2,23 +2,12 @@ import './topics.css';
 import gif from '../assets/JavaScript-frameworks2.gif';
 import AudioPlayer from './AudioPlayer';
 import Card from './Card';
-import logo from '../assets/logo.png';
+import LogoForPages from './LogoForPages';
 
 export default function ReactQuestions() {
-	const handleLogoClick = () => {
-		window.location.href = '/';
-	};
-
 	return (
 		<>
-			<img
-				src={logo}
-				alt='Logo'
-				onClick={handleLogoClick}
-				width={300}
-				height={300}
-			/>
-
+			<LogoForPages /> 
 			<img src={gif} width={300} height={300} alt='React gif' />
 			<h1>React Flashcards</h1>
 			<AudioPlayer />

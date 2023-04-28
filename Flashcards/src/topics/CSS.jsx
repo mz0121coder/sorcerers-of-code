@@ -1,23 +1,13 @@
 import './topics.css';
 import AudioPlayer from './AudioPlayer';
 import Card from './Card';
-import logo from '../assets/logo.png';
+import LogoForPages from './LogoForPages';
 import CSSgif from '../assets/CSS-animation2.gif';
 
 export default function CSS() {
-	const handleLogoClick = () => {
-		window.location.href = '/';
-	};
-
 	return (
 		<>
-			<img
-				src={logo}
-				alt='Logo'
-				onClick={handleLogoClick}
-				width={300}
-				height={300}
-			/>
+			<LogoForPages /> 
 			<img src={CSSgif} alt='CSS gif' width={300} height={300} />
 			<h1>CSS Flashcards</h1>
 			<AudioPlayer />

@@ -1,23 +1,13 @@
 import './topics.css';
 import AudioPlayer from './AudioPlayer';
 import Card from './Card';
-import logo from '../assets/logo.png';
+import LogoForPages from './LogoForPages';
 import study2 from '../assets/study2.gif';
 
 export default function JS() {
-	const handleLogoClick = () => {
-		window.location.href = '/';
-	};
-
 	return (
 		<>
-			<img
-				src={logo}
-				alt='Logo'
-				onClick={handleLogoClick}
-				width={300}
-				height={300}
-			/>
+			<LogoForPages /> 
 			<img
 				src={study2}
 				alt='gif of someone studying'

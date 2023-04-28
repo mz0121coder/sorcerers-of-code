@@ -1,7 +1,7 @@
 import './App.css';
 import { useNavigate } from 'react-router-dom';
 import song4 from './topics/music/ghostwriter_heart_on_my_sleeve.mp3'
-import logo from '../public/logo.png';
+import logo from '/logo.png';
 
 function App() {
 	const navigate = useNavigate();
