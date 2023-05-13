@@ -1,20 +1,21 @@
 import logo from '../assets/logo.png';
-import './topics.css';
+import './logo.css';
 
 export default function LogoForPages() {
 	const handleLogoClick = () => {
 		window.location.href = '/';
 	};
 
-    return (
+	return (
 		<>
 			<img
+				id='logo'
 				src={logo}
 				alt='Logo'
 				onClick={handleLogoClick}
 				width={300}
 				height={300}
 			/>
-        </>
-    );
+		</>
+	);
 }
