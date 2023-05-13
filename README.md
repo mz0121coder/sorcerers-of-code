@@ -14,10 +14,9 @@ CodeCards is [hosted on Netlify](https://sorcerers-of-code-mz.netlify.app/)
 
 ## Features
 
-- Responsive design
+- Responsive design and good accessibility scores
 - 50+ flashcards on JavaScript, CSS and React topics
-- Study music
-- Custom logos
+- Study music and custom logos
 
 ## Authors
 
