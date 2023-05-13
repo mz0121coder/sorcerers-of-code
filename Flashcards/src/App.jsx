@@ -1,6 +1,6 @@
 import './App.css';
 import { useNavigate } from 'react-router-dom';
-import song4 from './topics/music/ghostwriter_heart_on_my_sleeve.mp3'
+import song4 from './topics/music/ghostwriter_heart_on_my_sleeve.mp3';
 import logo from '/logo.png';
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
 	const handleReactClick = () => navigate('/React');
 
 	return (
-		// <a href="https://storyset.com/web">Web illustrations by Storyset</a>
 		<div className='container'>
 			<img
 				src={logo}

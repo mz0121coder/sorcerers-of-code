@@ -1,21 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import Quizzes from './Quizzes.jsx';
 import CSS from './topics/CSS.jsx';
 import JS from './topics/JS.jsx';
 import ReactQuestions from './topics/React.jsx';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
-	},
-	{
-		path: '/quizzes',
-		element: <Quizzes />,
 	},
 	{
 		path: '/CSS',
