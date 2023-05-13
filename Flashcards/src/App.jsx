@@ -11,35 +11,38 @@ function App() {
 	const handleReactClick = () => navigate('/React');
 
 	return (
-		<div className='container'>
-			<img
-				src={logo}
-				alt='SoC company logo'
-				width={400}
-				height={400}
-				className='logo'
-			/>
-			<div>
-				<audio className='homeSong' src={song4} controls />
+		<>
+			{' '}
+			<div className='container'>
+				<img
+					src={logo}
+					alt='SoC company logo'
+					width={400}
+					height={400}
+					className='logo'
+				/>
+				<div>
+					<audio className='homeSong' src={song4} controls />
+				</div>
+				<div className='text-container'>
+					<h1 className='title'>
+						Welcome to
+						<br /> CodeCards
+					</h1>
+				</div>
+				<div className='button-container'>
+					<button className='button' onClick={handleCssClick}>
+						CSS
+					</button>
+					<button className='button' onClick={handleJsClick}>
+						JavaScript
+					</button>
+					<button className='button' onClick={handleReactClick}>
+						React
+					</button>
+				</div>
 			</div>
-			<div className='text-container'>
-				<h1 className='title'>
-					Welcome to
-					<br /> CodeCards
-				</h1>
-			</div>
-			<div className='button-container'>
-				<button className='button' onClick={handleCssClick}>
-					CSS
-				</button>
-				<button className='button' onClick={handleJsClick}>
-					JavaScript
-				</button>
-				<button className='button' onClick={handleReactClick}>
-					React
-				</button>
-			</div>
-		</div>
+		</>
 	);
 }
 
