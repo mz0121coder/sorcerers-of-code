@@ -1,23 +1,28 @@
-# frontend-project
+# CodeCards by Sorcerers of Code
 
-## Overview
-During the first 6 weeks of the bootcamp, quizzes have been useful for gauging knowledge and
-keeping concepts fresh in our minds. However, all the quizzes and resources can sometimes get scattered and it is hard to keep track of revision materials.
-By having one app to keep flashcards as well as useful links for various topics, we can make our learning journey easier through spaced repetition.
+## 
 
-## User Story
-```As a bootcamper, I want to be able to easily access flashcards on the weekly topics, so that I can save time and continue learning on my own schedule, using this method to build my knowledge and help me when solving coding challenges & building projects.``` 
+An app to improve memory retention and learn new coding concepts quickly. Built with Vite and React Router. 
 
-## User Journey
+## Demo
 
-![User Flow](./planning/User-Flow.jpg) 
+![app-demo](./planning/sorcerers-of-code-demo.gif)
 
-## Early Wireframing for landing page
+## How to Use
 
-![Early Wireframing for landing page](./planning/EarlyWireframe.png)
+CodeCards is [hosted on Netlify](https://sorcerers-of-code-mz.netlify.app/)
 
-![wireframing for content page](./planning/lo-fi-frame_for_page.png)
-## hi-fi wireframe of landing page
-![hi-fi wireframe of landing page](./planning/wireframe-homePage.png)
-## hi-fi wireframe of content page
-![hi-fi wireframe of content page](./planning/wireframe-reactPage.png)
+## Features
+
+- Responsive design
+- 50+ flashcards on JavaScript, CSS and React topics
+- Study music
+- Custom logos
+
+## Authors
+
+- [Mohammad](https://www.github.com/mz0121coder)
+- [Jonathan](https://github.com/Grego12098)
+- [Mia](https://github.com/Miadowne)
+- [Saad](https://github.com/saadash1268)
+
