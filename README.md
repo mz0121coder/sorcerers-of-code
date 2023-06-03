@@ -1,7 +1,5 @@
 # CodeCards by Sorcerers of Code
 
-## Overview
-
 A frontend app to improve memory retention and learn new coding concepts quickly. Built with Vite and React Router in a 1 week sprint. 
 
 ## Demo
