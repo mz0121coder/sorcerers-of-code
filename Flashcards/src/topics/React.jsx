@@ -8,8 +8,16 @@ import { reactCards } from '../cards/reactCards';
 export default function ReactQuestions() {
 	return (
 		<>
-			<LogoForPages />
-			<img src={gif} width={300} height={300} alt='React gif' />
+			<div className='logo-img-container'>
+				<LogoForPages />
+				<img
+					src={gif}
+					width={150}
+					className='gif'
+					height={150}
+					alt='React gif'
+				/>
+			</div>
 			<h1>React Flashcards</h1>
 			<AudioPlayer />
 			<Card cards={reactCards} />

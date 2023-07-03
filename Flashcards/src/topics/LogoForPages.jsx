@@ -13,8 +13,8 @@ export default function LogoForPages() {
 				src={logo}
 				alt='Logo'
 				onClick={handleLogoClick}
-				width={300}
-				height={300}
+				width={150}
+				height={150}
 			/>
 		</>
 	);

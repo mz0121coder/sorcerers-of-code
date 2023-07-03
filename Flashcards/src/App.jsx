@@ -17,8 +17,8 @@ function App() {
 				<img
 					src={logo}
 					alt='SoC company logo'
-					width={400}
-					height={400}
+					width={200}
+					height={200}
 					className='logo'
 				/>
 				<div>

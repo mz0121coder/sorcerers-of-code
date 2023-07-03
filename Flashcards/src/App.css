@@ -11,9 +11,17 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
 	padding: 2rem;
 	box-sizing: border-box;
+}
+
+.homeSong {
+	width: 275px;
+	height: 75px;
+	border-radius: 15%;
+	margin: 10px;
+	background-color: #d98713;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -26,25 +34,25 @@ body {
 .button-container {
 	display: flex;
 	justify-content: center;
-	gap: 2rem;
+	gap: 0;
 }
 
-.button-container button {
+button {
 	background-color: #d98713;
 	color: #2b2b2b;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 700;
 	border: none;
 	border-radius: 1rem;
 	margin: 1rem;
 	margin-bottom: 20px;
-	padding: 1rem 2rem;
+	padding: 1rem 1rem;
 	cursor: pointer;
 	box-shadow: 0px 0px 20px #d98713;
 	transition: all 0.3s ease-in-out;
 }
 
-.button-container button:hover {
+button:hover {
 	background-color: #2b2b2b;
 	color: #d98713;
 	box-shadow: 0px 0px 30px #d98713;
@@ -96,14 +104,17 @@ body {
 
 @media screen and (max-width: 480px) {
 	/* adjust h1 font size for even smaller screens */
+	.homeSong {
+		width: 200px;
+	}
 	.text-container h1 {
 		font-size: 60px;
 	}
 
 	.button-container {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
+		/* flex-direction: column; */
+		/* flex-wrap: wrap; */
 		align-items: center;
 		justify-content: center;
 		margin-top: 2rem;
@@ -111,15 +122,6 @@ body {
 
 	.button {
 		font-size: 0.8rem;
-		padding: 0.8rem 1.5rem;
+		padding: 0.8rem 1rem;
 	}
-}
-
-.homeSong {
-	width: 210px;
-	height: 100px;
-	border-radius: 15%;
-	margin: 10px;
-	background-color: #d98713;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

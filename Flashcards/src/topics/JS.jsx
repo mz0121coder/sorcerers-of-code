@@ -8,13 +8,17 @@ import { javascriptCards } from '../cards/javascriptCards';
 export default function JS() {
 	return (
 		<>
-			<LogoForPages />
-			<img
-				src={study2}
-				alt='gif of someone studying'
-				width={300}
-				height={300}
-			/>
+			<div className='logo-img-container'>
+				{' '}
+				<LogoForPages />
+				<img
+					src={study2}
+					className='gif'
+					alt='gif of someone studying'
+					width={150}
+					height={150}
+				/>
+			</div>
 			<h1>JavaScript Flashcards</h1>
 			<AudioPlayer />
 			<Card cards={javascriptCards} />

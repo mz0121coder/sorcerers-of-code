@@ -8,8 +8,17 @@ import { cssCards } from '../cards/cssCards';
 export default function CSS() {
 	return (
 		<>
-			<LogoForPages />
-			<img src={CSSgif} alt='CSS gif' width={300} height={300} />
+			<div className='logo-img-container'>
+				{' '}
+				<LogoForPages />
+				<img
+					src={CSSgif}
+					className='gif'
+					alt='CSS gif'
+					width={150}
+					height={150}
+				/>
+			</div>
 			<h1>CSS Flashcards</h1>
 			<AudioPlayer />
 			<Card cards={cssCards} />
