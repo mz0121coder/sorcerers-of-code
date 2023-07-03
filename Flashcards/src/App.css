@@ -1,130 +1,125 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
-  background-color: rgb(192, 228, 244);
-  text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	background-color: rgb(192, 228, 244);
+	text-align: center;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* margin-top: 2vh; */
-  height: 100vh;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: 2rem;
+	box-sizing: border-box;
 }
 
 .logo {
-  min-width: 200px;
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 2vh;
+	min-width: 200px;
+	max-width: 300px;
+	height: auto;
+	margin-bottom: 2vh;
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
 }
 
 .button-container button {
-  background-color: #d98713;
-  color: #2b2b2b;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 1rem;
-  margin: 1rem;
-  margin-bottom: 20px;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  box-shadow: 0px 0px 20px #d98713;
-  transition: all 0.3s ease-in-out;
+	background-color: #d98713;
+	color: #2b2b2b;
+	font-size: 1.2rem;
+	font-weight: 700;
+	border: none;
+	border-radius: 1rem;
+	margin: 1rem;
+	margin-bottom: 20px;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	box-shadow: 0px 0px 20px #d98713;
+	transition: all 0.3s ease-in-out;
 }
 
 .button-container button:hover {
-  background-color: #2b2b2b;
-  color: #d98713;
-  box-shadow: 0px 0px 30px #d98713;
+	background-color: #2b2b2b;
+	color: #d98713;
+	box-shadow: 0px 0px 30px #d98713;
 }
 
-
 .text-container h1 {
-  margin: 0;
-  font-size: 125px;
-  color: rgba(225, 225, 225, .01);
-  background-image: url("./assets/puzzle2.jpg");
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  animation: animate 15s ease-in-out infinite;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
+	margin: 0;
+	font-size: 125px;
+	color: rgba(225, 225, 225, 0.01);
+	background-image: url('./assets/puzzle2.jpg');
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	animation: animate 15s ease-in-out infinite;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 900;
 }
 
 @keyframes animate {
-  0%, 100% {
-    background-position: left top;
-  }
+	0%,
+	100% {
+		background-position: left top;
+	}
 
-  25% {
-    background-position: right bottom;
-  }
+	25% {
+		background-position: right bottom;
+	}
 
-  50% {
-    background-position: left bottom;
-  }
+	50% {
+		background-position: left bottom;
+	}
 
-  75% {
-    background-position: right top;
-  }
+	75% {
+		background-position: right top;
+	}
 }
 
 @media screen and (max-width: 768px) {
+	/* adjust h1 font size for smaller screens */
+	.text-container h1 {
+		font-size: 100px;
+	}
 
-  /* adjust h1 font size for smaller screens */
-  .text-container h1 {
-    font-size: 100px;
-  }
-
-  /* adjust button font size for smaller screens */
-  .button {
-    font-size: 1rem;
-  }
+	/* adjust button font size for smaller screens */
+	.button {
+		font-size: 1rem;
+	}
 }
 
 @media screen and (max-width: 480px) {
+	/* adjust h1 font size for even smaller screens */
+	.text-container h1 {
+		font-size: 60px;
+	}
 
-  /* adjust h1 font size for even smaller screens */
-  .text-container h1 {
-    font-size: 60px;
-  }
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-top: 2rem;
+	}
 
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .button {
-    font-size: .8rem;
-    padding: 0.8rem 1.5rem;
-  }
+	.button {
+		font-size: 0.8rem;
+		padding: 0.8rem 1.5rem;
+	}
 }
 
-
 .homeSong {
-  width: 210px;
-  height: 100px;
-  border-radius: 15%;
-  margin: 10px;
-  background-color: #d98713;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	width: 210px;
+	height: 100px;
+	border-radius: 15%;
+	margin: 10px;
+	background-color: #d98713;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
